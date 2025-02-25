@@ -1,11 +1,11 @@
 package frc.robot.commands;
 
-import edu.wpi.first.wpilibj2.command.CommandBase;
+import edu.wpi.first.wpilibj2.command.Command;
 import frc.robot.Constants;
 import frc.robot.other.Stopwatch;
 import frc.robot.subsystems.ShooterSubsystem;
 
-public class EjectCommand extends CommandBase {
+public class EjectCommand extends Command {
     private final ShooterSubsystem m_shooterSubsystem;
     private final Stopwatch timer;
     private double topSpeed = 0.0;

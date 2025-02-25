@@ -4,9 +4,9 @@
 
 package frc.robot;
 
+import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.XboxController;
-import edu.wpi.first.wpilibj2.command.button.Button;
 import edu.wpi.first.wpilibj2.command.button.Trigger;
 import frc.robot.commands.AutoCommand;
 import frc.robot.commands.DriveCommand;
@@ -17,7 +17,6 @@ import frc.robot.commands.ServoCommand;
 import frc.robot.commands.HighShooterCommand;
 import frc.robot.commands.EjectCommand;
 import frc.robot.other.FilteredController;
-// import frc.robot.subsystems.AutoSubsystem;
 import frc.robot.subsystems.DriveSubsystem;
 import frc.robot.subsystems.IntakeSubsystem;
 import frc.robot.subsystems.ServoSubsystem;
@@ -126,5 +125,10 @@ public class RobotContainer {
     } else {
       return 0.0;
     }
+  }
+
+  public static DriverStation.Alliance getAlliance() {
+    // :)
+    return DriverStation.getAlliance().orElse(null);
   }
 }

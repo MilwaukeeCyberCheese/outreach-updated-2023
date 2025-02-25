@@ -4,9 +4,8 @@
 
 package frc.robot;
 
-import com.revrobotics.CANSparkMax;
-import com.revrobotics.CANSparkMaxLowLevel.MotorType;
-
+import com.revrobotics.spark.SparkLowLevel.MotorType;
+import com.revrobotics.spark.SparkMax;
 import edu.wpi.first.math.util.Units;
 import edu.wpi.first.wpilibj.Servo;
 import edu.wpi.first.wpilibj.motorcontrol.MotorControllerGroup;
@@ -40,19 +39,19 @@ public final class Constants {
          * Access this object using the following code, for example:
          * Constants.controllers.leftFrontSpark
          */
-        public static final CANSparkMax leftFrontSpark = new CANSparkMax(DRIVETRAIN_LEFT_FRONT_SPARK,
+        public static final SparkMax leftFrontSpark = new SparkMax(DRIVETRAIN_LEFT_FRONT_SPARK,
                 MotorType.kBrushed);
-        public static final CANSparkMax leftRearSpark = new CANSparkMax(DRIVETRAIN_LEFT_REAR_SPARK, MotorType.kBrushed);
-        public static final CANSparkMax rightFrontSpark = new CANSparkMax(DRIVETRAIN_RIGHT_FRONT_SPARK,
+        public static final SparkMax leftRearSpark = new SparkMax(DRIVETRAIN_LEFT_REAR_SPARK, MotorType.kBrushed);
+        public static final SparkMax rightFrontSpark = new SparkMax(DRIVETRAIN_RIGHT_FRONT_SPARK,
                 MotorType.kBrushed);
-        public static final CANSparkMax rightRearSpark = new CANSparkMax(DRIVETRAIN_RIGHT_REAR_SPARK,
+        public static final SparkMax rightRearSpark = new SparkMax(DRIVETRAIN_RIGHT_REAR_SPARK,
                 MotorType.kBrushed);
 
-        public static final CANSparkMax intakeTopSpark = new CANSparkMax(INTAKE_TOP_SPARK, MotorType.kBrushed);
-        public static final CANSparkMax intakeBottomSpark = new CANSparkMax(INTAKE_BOTTOM_SPARK, MotorType.kBrushed);
+        public static final SparkMax intakeTopSpark = new SparkMax(INTAKE_TOP_SPARK, MotorType.kBrushed);
+        public static final SparkMax intakeBottomSpark = new SparkMax(INTAKE_BOTTOM_SPARK, MotorType.kBrushed);
 
-        public static final CANSparkMax shooterTopSpark = new CANSparkMax(SHOOTER_TOP_SPARK, MotorType.kBrushed);
-        public static final CANSparkMax shooterBottomSpark = new CANSparkMax(SHOOTER_BOTTOM_SPARK, MotorType.kBrushed);
+        public static final SparkMax shooterTopSpark = new SparkMax(SHOOTER_TOP_SPARK, MotorType.kBrushed);
+        public static final SparkMax shooterBottomSpark = new SparkMax(SHOOTER_BOTTOM_SPARK, MotorType.kBrushed);
         public static final Servo servo = new Servo(9);
     }
 

@@ -3,10 +3,10 @@ package frc.robot.commands;
 import java.util.function.DoubleSupplier;
 
 import edu.wpi.first.math.kinematics.ChassisSpeeds;
-import edu.wpi.first.wpilibj2.command.CommandBase;
+import edu.wpi.first.wpilibj2.command.Command;
 import frc.robot.subsystems.DriveSubsystem;
 
-public class DriveCommand extends CommandBase {
+public class DriveCommand extends Command {
     private final DriveSubsystem m_driveSubsystem;
 
     private final DoubleSupplier m_translationXSupplier;

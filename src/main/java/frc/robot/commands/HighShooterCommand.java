@@ -1,14 +1,15 @@
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj.DriverStation;
-import edu.wpi.first.wpilibj2.command.CommandBase;
+import edu.wpi.first.wpilibj2.command.Command;
 import frc.robot.Constants;
 import frc.robot.Robot;
+import frc.robot.RobotContainer;
 import frc.robot.subsystems.ServoSubsystem;
 import frc.robot.subsystems.ShooterSubsystem;
 import frc.robot.other.Stopwatch;
 
-public class HighShooterCommand extends CommandBase {
+public class HighShooterCommand extends Command {
     private final ShooterSubsystem m_shooterSubsystem;
     private final ServoSubsystem m_servoSubsystem;
     private final Stopwatch timer;
@@ -35,9 +36,9 @@ public class HighShooterCommand extends CommandBase {
         if (topSpeed == 0 && bottomSpeed == 0) {
             if (Robot.getColorSensor().getProximity() > 350
                     && (Robot.getColorSensor().getRed() > Robot.getColorSensor().getBlue()
-                            && DriverStation.getAlliance() != DriverStation.Alliance.Red
+                            && RobotContainer.getAlliance() != DriverStation.Alliance.Red
                             || Robot.getColorSensor().getBlue() > Robot.getColorSensor().getRed()
-                                    && DriverStation.getAlliance() != DriverStation.Alliance.Blue)) {
+                                    && RobotContainer.getAlliance() != DriverStation.Alliance.Blue)) {
                 topSpeed = Constants.subsystems.shooter.TOP_WRONG_BALL_SPEED;
                 bottomSpeed = Constants.subsystems.shooter.BOTTOM_WRONG_BALL_SPEED;
             } else {

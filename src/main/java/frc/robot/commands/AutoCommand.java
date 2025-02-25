@@ -1,10 +1,10 @@
 package frc.robot.commands;
 
 import edu.wpi.first.math.kinematics.ChassisSpeeds;
-import edu.wpi.first.wpilibj2.command.CommandBase;
+import edu.wpi.first.wpilibj2.command.Command;
 // import frc.robot.subsystems.AutoSubsystem;
 
-public class AutoCommand extends CommandBase {
+public class AutoCommand extends Command {
     // private final AutoSubsystem m_autoSubsystem;
 
     // //constructor
